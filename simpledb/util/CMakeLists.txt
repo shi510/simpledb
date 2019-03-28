@@ -1,0 +1,6 @@
+file(GLOB core_srcs "*.cc")
+file(GLOB core_hdrs "*.h")
+list(APPEND simpledb_source_files ${core_srcs})
+list(APPEND simpledb_header_files ${core_hdrs})
+set(simpledb_source_files ${simpledb_source_files} PARENT_SCOPE)
+set(simpledb_header_files ${simpledb_header_files} PARENT_SCOPE)
