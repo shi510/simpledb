@@ -1,0 +1,8 @@
+if(BUILD_TEST)
+    set(the_app unit_test)
+    file(GLOB test_srcs "*.cc")
+    include_directories(${simpledb_include_dirs})
+    add_executable(${the_app} ${test_srcs})
+    target_link_libraries(${the_app} simpledb)
+    set_target_properties(${the_app} PROPERTIES FOLDER "test")
+endif()
